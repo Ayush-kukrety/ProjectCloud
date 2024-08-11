@@ -23,16 +23,18 @@ const Header = () => {
 
     useEffect(() => {
         const savedTheme = localStorage.getItem('darkMode');
-        if (savedTheme !== null) {
+        if (savedTheme) {
             dispatch(setDarkMode(JSON.parse(savedTheme)));
         }
-    });
+    }, []);
+
 
     useEffect(() => {
         localStorage.setItem('darkMode', JSON.stringify(darkMode));
     }, [darkMode]);
 
     useEffect(() => {
+
         if (darkMode) {
             document.documentElement.classList.add('dark');
         } else {
@@ -59,6 +61,8 @@ const Header = () => {
                 <div className="flex justify-between items-center">
                     <Link href='/' className="flex items-center space-x-2">
                         <Image
+                            width={96}
+                            height={56}
                             className="hidden md:flex w-24 h-14"
                             src={darkMode ? "/logos/logo-dark.png" : "/logos/logo-light.png"}
                             alt="Logo"
@@ -93,6 +97,8 @@ const Header = () => {
                             className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
                         >
                             <Image
+                                height={24}
+                                width={24}
                                 className="h-6 w-6"
                                 src={darkMode ? "/svg/sun.svg" : "/svg/moon.svg"}
                                 alt={darkMode ? "Light mode" : "Dark mode"}
@@ -143,6 +149,8 @@ const Header = () => {
                         >
                             <span>{darkMode ? "Light Mode" : "Dark Mode"}</span>
                             <Image
+                                height={20}
+                                width={20}
                                 className="h-5 w-5"
                                 src={darkMode ? "/svg/sun.svg" : "/svg/moon.svg"}
                                 alt={darkMode ? "Light mode" : "Dark mode"}

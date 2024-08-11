@@ -87,7 +87,7 @@ const Projects: React.FC = () => {
             transition={{ delay: 0.3, duration: 0.5 }}
             className="hidden md:flex justify-center"
           >
-            <Image className="w-full max-w-md" src="/svg/time-machine.svg" alt="Time Machine" />
+            <Image width={100} height={100} className="w-full max-w-md" src="/svg/time-machine.svg" alt="Time Machine" />
           </motion.div>
         </div>
         {typed && <SearchResult keyword={keyword} />}

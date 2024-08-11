@@ -92,6 +92,7 @@ const SearchResult: React.FC<Props> = ({keyword}) => {
                                             src={`${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public/workshops/${cover}`}
                                             alt={title}
                                             className="w-full h-full object-cover"
+                                            height={500} width={500}
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
                                     </div>

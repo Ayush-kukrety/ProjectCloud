@@ -138,6 +138,7 @@ const View: React.FC = () => {
                     src={`${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public/projects/${cover}`}
                     alt={title}
                     className="w-full h-full object-cover"
+                    height={300} width={600}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
                 </div>

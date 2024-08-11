@@ -87,7 +87,7 @@ const Workshops: React.FC = () => {
                         transition={{ delay: 0.3, duration: 0.5 }}
                         className="hidden md:flex justify-center"
                     >
-                        <Image className="w-full max-w-md" src="/svg/seminar.svg" alt="Seminar" />
+                        <Image className="w-full max-w-md" src="/svg/seminar.svg" alt="Seminar" height={500} width={500} />
                     </motion.div>
                 </div>
                 {typed && <SearchResult keyword={keyword} />}

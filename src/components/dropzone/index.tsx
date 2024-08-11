@@ -103,7 +103,7 @@ const DropZone = ({ className, group, maxFiles, filetype, files, setFiles }: Pro
                             <div className="w-full h-40 border rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
                                 {file.type.startsWith('image/') ? (
                                     file.preview ? (
-                                        <Image className="w-full h-full object-contain" src={file.preview} alt="Preview" />
+                                        <Image className="w-full h-full object-contain" src={file.preview} alt="Preview" height={300} width={600} />
                                     ) : null
                                 ) : (
                                     <div className="text-center p-4">

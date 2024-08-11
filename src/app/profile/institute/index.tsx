@@ -108,14 +108,14 @@ const Institute = () => {
   useEffect(() => {
     getdata();
     getWorkshops();
-  })
+  },[])
 
   const router = useRouter();
   const dispatch = useDispatch();
   const handleLogout = async () => {
     toast.loading('Logging Out');
-    const response = await fetch('/api/auth/logout',{
-      method:'POST'
+    const response = await fetch('/api/auth/logout', {
+      method: 'POST'
     });
     toast.dismiss();
 
@@ -125,7 +125,7 @@ const Institute = () => {
       dispatch(instituteLogout());
       return;
     } else {
-      const {error} = await response.json();
+      const { error } = await response.json();
       console.error(error)
       toast.error("Error signing out");
 
@@ -255,9 +255,9 @@ const Institute = () => {
                   </tr>
                   : reqList.length == 0
                     ? <tr>
-                      <td 
-                      className="bg-slate-50 border-b dark:bg-gray-800 dark:border-gray-700"
-                      colSpan={4}>
+                      <td
+                        className="bg-slate-50 border-b dark:bg-gray-800 dark:border-gray-700"
+                        colSpan={4}>
                         <div className="text-xl font-medium my-3 text-center text-blue-600 dark:text-blue-400"> No Pending Requests</div>
                       </td>
                     </tr>
@@ -335,19 +335,17 @@ const Institute = () => {
                             whileHover={{ scale: 1.03 }}
                             className=' border-2 border-gray-300 dark:border-gray-600 p-4 rounded-lg shadow-md'
                           >
-                            <div className="md:order-2">
-                              <Image className=" object-cover rounded-lg" src={`${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public/workshops/${workshop.cover}`} alt="Workshop" />
-                            </div>
-                            <div className="md:order-1">
-                              <div className="card-body">
-                                <h5 className="text-2xl font-semibold mb-2">{workshop.title}</h5>
-                                <p className="text-lg mb-2">{workshop.description}</p>
-
-                                <a className="text-primary-purple hover:underline" href={workshop.link} target='_blank' rel="noreferrer">
-                                  <small>Visit <i className="fa-solid fa-xs fa-arrow-up-right-from-square"></i></small>
-                                </a>
+                            <Link href={workshop.link} target="_blank">
+                              <div className="md:order-2">
+                                <Image height={500} width={500} className=" object-cover rounded-lg" src={`${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public/workshops/${workshop.cover}`} alt="Workshop" />
                               </div>
-                            </div>
+                              <div className="md:order-1">
+                                <div className="card-body">
+                                  <h5 className="text-2xl font-semibold mb-2">{workshop.title}</h5>
+                                </div>
+                              </div>
+                            </Link>
+
                           </motion.article>
                         ))}
                       </div>

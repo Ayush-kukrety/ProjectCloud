@@ -13,6 +13,8 @@ const ServerDown = () => {
             src="/images/server-down.png"
             alt="Server Down"
             className="w-64 h-64 object-cover mb-6"
+            height={256}
+            width={256}
           />
           <Link href='/' className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded">
             Retry

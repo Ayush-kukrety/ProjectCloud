@@ -160,6 +160,7 @@ const Student = () => {
                       className="object-cover h-full w-full transition-transform duration-300 hover:scale-110"
                       src={`${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public/projects/${cover}`}
                       alt={title}
+                      height={300} width={600}
                     />
                   </div>
                   <div className='p-6'>

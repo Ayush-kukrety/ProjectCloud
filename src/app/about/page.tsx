@@ -176,17 +176,17 @@ const TestimonialCarousel: React.FC = () => {
       </h2>
       <Slider {...settings}>
         <div className="text-center px-4">
-          <Image src="/images/student 1.jpg" alt="Student 1" className="rounded-full w-24 h-24 mx-auto mb-4 object-cover" />
+          <Image src="/images/student 1.jpg" alt="Student 1" height={96} width={96} className="rounded-full mx-auto mb-4 object-cover" />
           <p className="text-lg mb-2">Prayog helped me showcase my AI project to institutes across India!</p>
           <h4 className="font-semibold">- Priya Sharma, Computer Science Student, Delhi</h4>
         </div>
         <div className="text-center px-4">
-          <Image src="/images/prof 1.jpg" alt="Professor 1" className="rounded-full w-24 h-24 mx-auto mb-4 object-cover" />
+          <Image src="/images/prof 1.jpg" alt="Professor 1" height={96} width={96} className="rounded-full mx-auto mb-4 object-cover" />
           <p className="text-lg mb-2">Our institute&apos;s workshop reached students from all corners of the country through Prayog.</p>
           <h4 className="font-semibold">- Dr. Rajesh Kumar, Professor, IIT Bombay</h4>
         </div>
         <div className="text-center px-4">
-          <Image src="/images/student 2.jpg" alt="Student 2" className="rounded-full w-24 h-24 mx-auto mb-4 object-cover" />
+          <Image src="/images/student 2.jpg" alt="Student 2" height={96} width={96} className="rounded-full w-24 h-24 mx-auto mb-4 object-cover" />
           <p className="text-lg mb-2">I found collaborators for my robotics project from different states!</p>
           <h4 className="font-semibold">- Arjun Reddy, Mechanical Engineering Student, Chennai</h4>
         </div>

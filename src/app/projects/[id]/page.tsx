@@ -37,7 +37,7 @@ const fetchProject = async (id: string) => {
         if (response.ok) {
             const { data } = await response.json();
             return data;
-        }else{
+        } else {
             throw new Error('Network response was not ok');
         }
 
@@ -58,6 +58,9 @@ const ProjectHeader: React.FC<{ project: Project }> = ({ project }) => (
                     src={`${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public/projects/${project.cover}`}
                     className='object-cover rounded-sm shadow-md'
                     alt="Project cover"
+                    height={300}
+                    width={600}
+                    unoptimized={true}
                 />
             </div>
         </div>
@@ -81,6 +84,9 @@ const Gallery: React.FC<{ images: string[] }> = ({ images }) => (
                         src={`${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public/projects/${image}`}
                         className='w-full object-cover rounded-sm'
                         alt={`Gallery ${i + 1}`}
+                        height={300}
+                        width={600}
+                        unoptimized={true}
                     />
                 </div>
             ))}

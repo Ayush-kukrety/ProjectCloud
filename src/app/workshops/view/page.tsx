@@ -4,6 +4,7 @@ import { BiArrowBack, BiSearch } from 'react-icons/bi';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
+import Loader from '@/components/loader';
 
 interface Workshop {
   id: number;
@@ -53,6 +54,10 @@ const View: React.FC = () => {
     setFilteredWorkshops(filtered);
   };
 
+  if (isLoading) {
+    return <Loader />
+  }
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -93,59 +98,40 @@ const View: React.FC = () => {
       </motion.section>
 
       <AnimatePresence>
-        {isLoading ? (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="flex justify-center items-center h-64"
-          >
-            <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-indigo-500"></div>
-          </motion.div>
-        ) : filteredWorkshops.length === 0 ? (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="text-center"
-          >
-            <h3 className="text-4xl font-semibold text-red-500 mb-4">No Workshops Found</h3>
-          </motion.div>
-        ) : (
-          <motion.section
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="pt-2 grid md:grid-cols-2 gap-4"
-          >
-            {filteredWorkshops.map((workshop) => (
-              <motion.article
-                key={workshop.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                whileHover={{ scale: 1.03 }}
-                className='grid md:grid-cols-2 border-2 border-gray-300 dark:border-gray-600 p-4 rounded-lg shadow-md'
+        <motion.section
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="pt-2 grid md:grid-cols-2 gap-4"
+        >
+          {filteredWorkshops.map((workshop) => (
+            <motion.article
+              key={workshop.id}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              whileHover={{ scale: 1.03 }}
+              className=' border-2 border-gray-300 dark:border-gray-600 p-4 rounded-lg shadow-md'
+            >
+              <a href={workshop.link} 
+              className='grid md:grid-cols-2'
+              target='_blank'
               >
                 <div className="md:order-2">
-                  <Image className="w-full h-auto object-cover rounded-lg" src={`${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public/workshops/${workshop.cover}`} alt="Workshop" />
+                  <Image height={500} width={500} className="w-full h-auto object-cover rounded-lg" src={`${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public/workshops/${workshop.cover}`} alt="Workshop" />
                 </div>
                 <div className="md:order-1">
                   <div className="card-body">
                     <h5 className="text-2xl font-semibold mb-2">{workshop.title}</h5>
                     <p className="text-lg mb-2">{workshop.description}</p>
                     <p className="text-gray-700 dark:text-gray-300 mb-1"><small>{workshop.category}</small></p>
-                    <p className="text-gray-700 dark:text-gray-300 mb-1"><small>{workshop.date}</small></p>
-                    <p className="text-gray-700 dark:text-gray-300 mb-2"><small>{workshop.views} Views</small></p>
-                    <a className="text-primary-purple hover:underline" href={workshop.link} target='_blank' rel="noreferrer">
-                      <small>Visit <i className="fa-solid fa-xs fa-arrow-up-right-from-square"></i></small>
-                    </a>
+                    <p className="text-gray-700 dark:text-gray-300"><small>{workshop.date}</small></p>
                   </div>
                 </div>
-              </motion.article>
-            ))}
-          </motion.section>
-        )}
+              </a>
+            </motion.article>
+          ))}
+        </motion.section>
       </AnimatePresence>
     </motion.div>
   );

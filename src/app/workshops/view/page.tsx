@@ -3,6 +3,7 @@ import React, { useState, useEffect, ChangeEvent } from 'react';
 import { BiArrowBack, BiSearch } from 'react-icons/bi';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 
 interface Workshop {
   id: number;
@@ -127,7 +128,7 @@ const View: React.FC = () => {
                 className='grid md:grid-cols-2 border-2 border-gray-300 dark:border-gray-600 p-4 rounded-lg shadow-md'
               >
                 <div className="md:order-2">
-                  <img className="w-full h-auto object-cover rounded-lg" src={`${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public/workshops/${workshop.cover}`} alt="Workshop" />
+                  <Image className="w-full h-auto object-cover rounded-lg" src={`${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public/workshops/${workshop.cover}`} alt="Workshop" />
                 </div>
                 <div className="md:order-1">
                   <div className="card-body">

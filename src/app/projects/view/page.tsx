@@ -6,6 +6,7 @@ import { BiArrowBack, BiSearch } from "react-icons/bi";
 import { motion, AnimatePresence } from "framer-motion";
 import Loader from "@/components/loader";
 import toast from "react-hot-toast";
+import Image from "next/image";
 
 interface Project {
   created_at: string;
@@ -133,7 +134,7 @@ const View: React.FC = () => {
                 className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
               >
                 <div className="relative h-48">
-                  <img
+                  <Image
                     src={`${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public/projects/${cover}`}
                     alt={title}
                     className="w-full h-full object-cover"

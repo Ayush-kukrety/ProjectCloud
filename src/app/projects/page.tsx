@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import SearchResult from './features/SearchResult';
 import ProjectCategories from './features/ProjectCategories';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Projects: React.FC = () => {
   const [keyword, setKeyword] = useState<string>(''); 
@@ -86,7 +87,7 @@ const Projects: React.FC = () => {
             transition={{ delay: 0.3, duration: 0.5 }}
             className="hidden md:flex justify-center"
           >
-            <img className="w-full max-w-md" src="/svg/time-machine.svg" alt="Time Machine" />
+            <Image className="w-full max-w-md" src="/svg/time-machine.svg" alt="Time Machine" />
           </motion.div>
         </div>
         {typed && <SearchResult keyword={keyword} />}

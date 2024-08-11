@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import { instituteLogout } from "@/lib/feature/auth/authSlice";
 import Link from "next/link";
+import Image from "next/image";
 
 type Project = {
   title: string;
@@ -107,8 +108,7 @@ const Institute = () => {
   useEffect(() => {
     getdata();
     getWorkshops();
-
-  }, [])
+  })
 
   const router = useRouter();
   const dispatch = useDispatch();
@@ -336,7 +336,7 @@ const Institute = () => {
                             className=' border-2 border-gray-300 dark:border-gray-600 p-4 rounded-lg shadow-md'
                           >
                             <div className="md:order-2">
-                              <img className=" object-cover rounded-lg" src={`${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public/workshops/${workshop.cover}`} alt="Workshop" />
+                              <Image className=" object-cover rounded-lg" src={`${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public/workshops/${workshop.cover}`} alt="Workshop" />
                             </div>
                             <div className="md:order-1">
                               <div className="card-body">

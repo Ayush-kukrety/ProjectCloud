@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react';
 import { RootState } from '@/lib/store'; // Corrected path
 import Link from 'next/link';
 import { useAppDispatch, useAppSelector } from '@/lib/hooks';
+import Image from 'next/image';
 
 const Header = () => {
     const darkMode = useAppSelector((state: RootState) => state.theme.darkMode);
@@ -25,7 +26,7 @@ const Header = () => {
         if (savedTheme !== null) {
             dispatch(setDarkMode(JSON.parse(savedTheme)));
         }
-    }, []);
+    });
 
     useEffect(() => {
         localStorage.setItem('darkMode', JSON.stringify(darkMode));
@@ -57,7 +58,7 @@ const Header = () => {
             <div className="container mx-auto px-4 py-3">
                 <div className="flex justify-between items-center">
                     <Link href='/' className="flex items-center space-x-2">
-                        <img
+                        <Image
                             className="hidden md:flex w-24 h-14"
                             src={darkMode ? "/logos/logo-dark.png" : "/logos/logo-light.png"}
                             alt="Logo"
@@ -91,7 +92,7 @@ const Header = () => {
                             onClick={toggleDarkMode}
                             className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
                         >
-                            <img
+                            <Image
                                 className="h-6 w-6"
                                 src={darkMode ? "/svg/sun.svg" : "/svg/moon.svg"}
                                 alt={darkMode ? "Light mode" : "Dark mode"}
@@ -141,7 +142,7 @@ const Header = () => {
                             className="w-full text-left py-2 px-4 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md transition-colors duration-200 flex items-center space-x-2"
                         >
                             <span>{darkMode ? "Light Mode" : "Dark Mode"}</span>
-                            <img
+                            <Image
                                 className="h-5 w-5"
                                 src={darkMode ? "/svg/sun.svg" : "/svg/moon.svg"}
                                 alt={darkMode ? "Light mode" : "Dark mode"}

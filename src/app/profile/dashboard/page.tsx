@@ -13,7 +13,7 @@ const Dashboard = () => {
       if (!student.logged && !institute.logged) {
         router.replace('/');
       }
-    }, [student.logged, institute.logged]);
+    }, [student.logged, institute.logged, router]);
   
     if (student.logged) {
       router.replace('/profile');

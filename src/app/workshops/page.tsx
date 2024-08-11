@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import SearchResult from './features/SearchResult';
 import WorkshopsCategories from './features/WorkshopsCategories';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Workshops: React.FC = () => {
     const [keyword, setKeyword] = useState<string>('');
@@ -50,7 +51,7 @@ const Workshops: React.FC = () => {
                             transition={{ delay: 0.4 }}
                             className="text-lg leading-relaxed text-gray-600 dark:text-gray-300"
                         >
-                            Stay informed about past and upcoming events, ensuring you're always ready to seize valuable opportunities in your area of interest.
+                            Stay informed about past and upcoming events, ensuring you&apos;re always ready to seize valuable opportunities in your area of interest.
                         </motion.p>
                         <motion.div
                             initial={{ opacity: 0 }}
@@ -86,7 +87,7 @@ const Workshops: React.FC = () => {
                         transition={{ delay: 0.3, duration: 0.5 }}
                         className="hidden md:flex justify-center"
                     >
-                        <img className="w-full max-w-md" src="/svg/seminar.svg" alt="Seminar" />
+                        <Image className="w-full max-w-md" src="/svg/seminar.svg" alt="Seminar" />
                     </motion.div>
                 </div>
                 {typed && <SearchResult keyword={keyword} />}

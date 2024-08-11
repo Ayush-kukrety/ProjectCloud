@@ -6,6 +6,7 @@ import 'aos/dist/aos.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const About: React.FC = () => {
   useEffect(() => {
@@ -175,18 +176,18 @@ const TestimonialCarousel: React.FC = () => {
       </h2>
       <Slider {...settings}>
         <div className="text-center px-4">
-          <img src="/images/student 1.jpg" alt="Student 1" className="rounded-full w-24 h-24 mx-auto mb-4 object-cover" />
-          <p className="text-lg mb-2">"Prayog helped me showcase my AI project to institutes across India!"</p>
+          <Image src="/images/student 1.jpg" alt="Student 1" className="rounded-full w-24 h-24 mx-auto mb-4 object-cover" />
+          <p className="text-lg mb-2">Prayog helped me showcase my AI project to institutes across India!</p>
           <h4 className="font-semibold">- Priya Sharma, Computer Science Student, Delhi</h4>
         </div>
         <div className="text-center px-4">
-          <img src="/images/prof 1.jpg" alt="Professor 1" className="rounded-full w-24 h-24 mx-auto mb-4 object-cover" />
-          <p className="text-lg mb-2">"Our institute's workshop reached students from all corners of the country through Prayog."</p>
+          <Image src="/images/prof 1.jpg" alt="Professor 1" className="rounded-full w-24 h-24 mx-auto mb-4 object-cover" />
+          <p className="text-lg mb-2">Our institute&apos;s workshop reached students from all corners of the country through Prayog.</p>
           <h4 className="font-semibold">- Dr. Rajesh Kumar, Professor, IIT Bombay</h4>
         </div>
         <div className="text-center px-4">
-          <img src="/images/student 2.jpg" alt="Student 2" className="rounded-full w-24 h-24 mx-auto mb-4 object-cover" />
-          <p className="text-lg mb-2">"I found collaborators for my robotics project from different states!"</p>
+          <Image src="/images/student 2.jpg" alt="Student 2" className="rounded-full w-24 h-24 mx-auto mb-4 object-cover" />
+          <p className="text-lg mb-2">I found collaborators for my robotics project from different states!</p>
           <h4 className="font-semibold">- Arjun Reddy, Mechanical Engineering Student, Chennai</h4>
         </div>
       </Slider>
@@ -207,7 +208,7 @@ const InteractiveCallToAction: React.FC = () => {
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
       >
-        <span className="cta-text">Be Part of India's Technical Revolution</span>
+        <span className="cta-text">Be Part of India&apos;s Technical Revolution</span>
         {hovered && (
           <Link href="/auth/login" className="cta-link ml-4 underline">Sign Up Now</Link>
         )}

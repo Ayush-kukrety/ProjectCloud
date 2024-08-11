@@ -2,6 +2,7 @@ import React from "react";
 import ReactMarkdown from 'react-markdown';
 import { IoDocumentAttachOutline } from "react-icons/io5";
 import NoProjectFound from "./no-project-found";
+import Image from "next/image";
 
 interface Project {
     aishe: string;
@@ -53,7 +54,7 @@ const ProjectHeader: React.FC<{ project: Project }> = ({ project }) => (
                 <p className='text-xl text-gray-600 dark:text-gray-300 mt-4'>{project.description}</p>
             </div>
             <div className='md:w-1/3 ml-0 md:ml-8'>
-                <img
+                <Image
                     src={`${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public/projects/${project.cover}`}
                     className='object-cover rounded-sm shadow-md'
                     alt="Project cover"
@@ -76,7 +77,7 @@ const Gallery: React.FC<{ images: string[] }> = ({ images }) => (
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {images.map((image, i) => (
                 <div key={i} className='rounded-lg shadow-md'>
-                    <img
+                    <Image
                         src={`${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public/projects/${image}`}
                         className='w-full object-cover rounded-sm'
                         alt={`Gallery ${i + 1}`}

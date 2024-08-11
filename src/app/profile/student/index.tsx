@@ -8,6 +8,7 @@ import { useRouter } from "next/navigation";
 import { useAppDispatch, useAppSelector } from "@/lib/hooks";
 import { studentLogout } from "@/lib/feature/auth/authSlice";
 import Link from "next/link";
+import Image from "next/image";
 
 interface Project {
   aishe: string;
@@ -155,7 +156,7 @@ const Student = () => {
                   className="bg-white/70 dark:bg-gray-700/70 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:-translate-y-1"
                 >
                   <div className='h-48 overflow-hidden'>
-                    <img
+                    <Image
                       className="object-cover h-full w-full transition-transform duration-300 hover:scale-110"
                       src={`${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public/projects/${cover}`}
                       alt={title}

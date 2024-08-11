@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const ServerDown = () => {
@@ -6,9 +7,9 @@ const ServerDown = () => {
         <div className="p-8 bg-white rounded shadow-lg text-center">
           <h1 className="text-3xl font-semibold mb-4">Server Down</h1>
           <p className="text-gray-600 mb-6">
-            We're sorry, but the server is currently down. Please try again later.
+            We&apos;re sorry, but the server is currently down. Please try again later.
           </p>
-          <img
+          <Image
             src="/images/server-down.png"
             alt="Server Down"
             className="w-64 h-64 object-cover mb-6"

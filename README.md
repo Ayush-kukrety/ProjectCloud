@@ -1,5 +1,5 @@
-# Prayog 🚀
-Prayog is an open-source platform that connects students and educational institutes, facilitating project sharing and event discovery.
+# ProjectCloud 🚀
+Project Cloud is an open-source platform that connects students and educational institutes, facilitating project sharing and event discovery.
 
 ## 🌟 Features
 
@@ -17,9 +17,9 @@ User Accounts: Login to upload projects or post events
 ## 🚀 Getting Started
 
 1. Clone the repository:
-``` git clone https://github.com/adwait7830/prayog.git```
+``` git clone https://github.com/foldername```
 2. Install dependencies:
-```cd prayog```
+```cd foldername```
 ```npm install```
 3. Set up Supabase:
     - Create a Supabase project

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Header from "@/components/header"
+import Header from "@/components/header";
+
 import "./globals.css";
 import Footer from "@/components/footer";
 import { Toaster } from "react-hot-toast";
@@ -10,10 +11,10 @@ import { StoreProvider } from "@/providers/store";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Prayog - Home",
-  description: "Discover Prayog, an open-source platform that connects students and institutes, enabling seamless project uploads and event sharing. Join a thriving community where students showcase their projects, and institutes post seminars, workshops, and more—no login required to explore!",
-  applicationName: 'Prayog',
-  keywords: ["Prayog",
+  title: "Project Cloud - Home",
+  description: "Discover Project Cloud, an open-source platform that connects students and institutes, enabling seamless project uploads and event sharing. Join a thriving community where students showcase their projects, and institutes post seminars, workshops, and more—no login required to explore!",
+  applicationName: 'projectCloud',
+  keywords: ["projectCloud",
     "Student projects",
     "Institute events",
     "Next.js platform",
@@ -29,13 +30,13 @@ export const metadata: Metadata = {
     "Innovative projects",
     "Tech workshops"],
   robots: 'index, follow',
-  alternates: { canonical: 'https://prayog.vercel.app' },
+  alternates: { canonical: 'https://projectcloud.vercel.app' },
   openGraph: {
-    title: "Prayog, A pioneering initiative that brings together students and institutes on a single platform.",
+    title: "Project Cloud, A pioneering initiative that brings together students and institutes on a single platform.",
     type: "website",
-    url: "https://prayog.vercel.app",
-    description: "Discover Prayog, an open-source platform that connects students and institutes, enabling seamless project uploads and event sharing.",
-    siteName: "Prayog",
+    url: "https://projectcloud.vercel.app",
+    description: "Discover Project Cloud, an open-source platform that connects students and institutes, enabling seamless project uploads and event sharing.",
+    siteName: "Project Cloud",
   },
 };
 
@@ -56,6 +57,7 @@ export default function RootLayout({
             />
             <Header />
             {children}
+            
             <Footer />
           </AuthProvider>
         </StoreProvider>

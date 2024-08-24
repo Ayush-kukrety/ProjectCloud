@@ -37,7 +37,7 @@ export async function POST(req: NextRequest) {
             return NextResponse.json({ error: error.message }, { status: 400 });
         }
 
-        return NextResponse.json({ message: type === 'student' ? 'Check your email for verification' : 'Check your email for verification\nContact Prayog for Institutional Verification' });
+        return NextResponse.json({ message: type === 'student' ? 'Check your email for verification' : 'Check your email for verification\nContact Project Cloud for Institutional Verification' });
     } catch {
         return NextResponse.json({ error: 'Server Error. Please try again later' }, { status: 500 });
     }

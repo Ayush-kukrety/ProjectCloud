@@ -8,9 +8,9 @@ const Footer = () => {
           {/* Column 1 */}
           <div className="space-y-4">
             <h2 className="text-xl font-semibold mb-4 border-b-2 border-current inline-block pb-2">Contact Us</h2>
-            <p className="flex items-center"><FaEnvelope className="mr-2" /> support@prayog.com</p>
+            <p className="flex items-center"><FaEnvelope className="mr-2" /> support@projectcloud.com</p>
             <p className="flex items-center"><FaPhone className="mr-2" /> 125-233-648</p>
-            <p className="flex items-center"><FaMapMarkerAlt className="mr-2" /> Vigyan Bhawan, New Delhi</p>
+            <p className="flex items-center"><FaMapMarkerAlt className="mr-2" />IILM UNIVERSITY , GR. NOIDA</p>
           </div>
 
           {/* Column 2 */}
@@ -51,13 +51,13 @@ const Footer = () => {
       </div>
 
       <div className="container flex flex-col items-center md:flex-row border-t border-gray-300 dark:border-gray-700 mt-8  justify-between py-4 px-10">
-        <p>&copy; {new Date().getFullYear()} Prayog. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Project Cloud. All rights reserved.</p>
         <p className="text-sm opacity-75">
           Made with <span className="text-red-500 animate-pulse">&hearts;</span> by <a
             className="text-blue-500"
             target="_blank"
             rel="noopener"
-            href="https://github.com/adwait7830">Divyanshu</a
+            href="https://github.com/">CreateCode</a
           >
         </p>
       </div>

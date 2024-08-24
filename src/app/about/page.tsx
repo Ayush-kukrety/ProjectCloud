@@ -33,7 +33,7 @@ const Header: React.FC = () => {
   return (
     <header className="text-center py-12 px-4">
       <h1 className="text-4xl md:text-5xl font-extrabold mb-4 text-indigo-600 dark:text-indigo-400 animate-fade-in">
-        Welcome to Prayog
+        Welcome to Project Cloud
       </h1>
       <p className="text-xl dark:text-yellow-500 text-red-500 md:text-2xl mb-8">
         Uniting Students and Institutes Across India
@@ -50,7 +50,7 @@ const Mission: React.FC = () => {
           Our Mission
         </h2>
         <p className="text-lg mb-4">
-          Prayog is a pioneering initiative that brings together students and institutes on a single platform, 
+        Project Cloud is a pioneering initiative that brings together students and institutes on a single platform, 
           showcasing technical projects, workshops, and seminars from across India.
         </p>
         <p className="text-lg">
@@ -65,12 +65,12 @@ const InteractiveTimeline: React.FC = () => {
   return (
     <section className="timeline-container p-8 md:p-12 max-w-4xl mx-auto">
       <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-darkTheme-primary dark:text-lightTheme-primary animate-fade-in">
-        The Prayog Journey
+        The Project Cloud Journey
       </h2>
       <div className="timeline">
         <div className="timeline-item" data-aos="fade-right">
           <h3 className="text-2xl font-bold mb-2 dark:text-yellow-500 text-red-500 ">Inception</h3>
-          <p>Prayog was born from the vision to create a unified platform for technical innovation in India.</p>
+          <p>Project Cloud was born from the vision to create a unified platform for technical innovation in India.</p>
         </div>
         <div className="timeline-item" data-aos="fade-left">
           <h3 className="text-2xl font-bold mb-2 dark:text-yellow-500 text-red-500 ">Connecting Minds</h3>
@@ -78,7 +78,7 @@ const InteractiveTimeline: React.FC = () => {
         </div>
         <div className="timeline-item" data-aos="fade-right">
           <h3 className="text-2xl font-bold mb-2 dark:text-yellow-500 text-red-500 ">Expanding Horizons</h3>
-          <p>Prayog grew to include a wide array of technical projects, workshops, and seminars from various disciplines.</p>
+          <p>Project Cloud grew to include a wide array of technical projects, workshops, and seminars from various disciplines.</p>
         </div>
         <div className="timeline-item" data-aos="fade-left">
           <h3 className="text-2xl font-bold mb-2 dark:text-yellow-500 text-red-500 ">Empowering Innovation</h3>
@@ -111,7 +111,7 @@ const AnimatedInfoGraphics: React.FC = () => {
   return (
     <section className="p-8 md:p-12 max-w-5xl mx-auto">
       <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-darkTheme-primary dark:text-lightTheme-primary animate-fade-in">
-        Prayog in Numbers
+      Project Cloud in Numbers
       </h2>
       <div className="grid md:grid-cols-3 gap-8">
         <AnimatedInfoGraphic title="Student Projects" value={5000} icon="fa-project-diagram" />
@@ -177,12 +177,12 @@ const TestimonialCarousel: React.FC = () => {
       <Slider {...settings}>
         <div className="text-center px-4">
           <Image src="/images/student 1.jpg" alt="Student 1" height={96} width={96} className="rounded-full mx-auto mb-4 object-cover" />
-          <p className="text-lg mb-2">Prayog helped me showcase my AI project to institutes across India!</p>
+          <p className="text-lg mb-2">Project Cloud helped me showcase my AI project to institutes across India!</p>
           <h4 className="font-semibold">- Priya Sharma, Computer Science Student, Delhi</h4>
         </div>
         <div className="text-center px-4">
           <Image src="/images/prof 1.jpg" alt="Professor 1" height={96} width={96} className="rounded-full mx-auto mb-4 object-cover" />
-          <p className="text-lg mb-2">Our institute&apos;s workshop reached students from all corners of the country through Prayog.</p>
+          <p className="text-lg mb-2">Our institute&apos;s workshop reached students from all corners of the country through Project Cloud.</p>
           <h4 className="font-semibold">- Dr. Rajesh Kumar, Professor, IIT Bombay</h4>
         </div>
         <div className="text-center px-4">
@@ -201,7 +201,7 @@ const InteractiveCallToAction: React.FC = () => {
   return (
     <section className="py-12 text-center">
       <h2 className="text-3xl md:text-4xl font-bold mb-4 text-darkTheme-primary dark:text-lightTheme-primary animate-fade-in">
-        Join the Prayog Community
+        Join the Project Cloud Community
       </h2>
       <div 
         className={`cta-button ${hovered ? 'expanded' : ''} inline-block bg-blue-500 text-white font-bold py-2 px-4 rounded transition-all duration-300 ease-in-out`}

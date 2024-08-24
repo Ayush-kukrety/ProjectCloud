@@ -26,7 +26,7 @@ export async function POST(req: NextRequest) {
 
   if (type === 'institute' && !institutional_verification) {
     await supabase.auth.signOut();
-    return NextResponse.json({ error: 'Institutional Verification is pending. Contact Prayog Support' }, { status: 403 });
+    return NextResponse.json({ error: 'Institutional Verification is pending. Contact Project Cloud Support' }, { status: 403 });
   }
 
   return NextResponse.json({ user: data.user });

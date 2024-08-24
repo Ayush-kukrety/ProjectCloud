@@ -26,10 +26,9 @@ const index: React.FC = () => {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.2 }}
-                            className="text-xl md:text-3xl lg:text-4xl font-[sura] text-indigo-600 dark:text-indigo-400"
+                            className="text-xl md:text-3xl lg:text-4xl  font-[sura] text-red-600 dark:text-red-400"
                         >
-                            <p>अनेकसंशयोच्छेदि, परोक्षार्थस्य दर्शकम् ।</p>
-                            <p>सर्वस्य लोचनं शास्त्रं, यस्य नास्त्यन्ध एव सः ॥</p>
+                            <h2>&lt;WelCome to Project Cloud /&gt;</h2>
                         </motion.div>
                         <motion.div
                             initial={{ opacity: 0 }}
@@ -46,8 +45,8 @@ const index: React.FC = () => {
                             transition={{ delay: 0.3 }}
                             className="text-lg md:text-lg lg:text-xl font-serif mt-2"
                         >
-                            <p>It blasts many doubts, foresees what is not obvious;</p>
-                            <p>Science is the eye of everyone, one who has not got it, is like a blind.</p>
+                            <p>We are glad, You're Here</p>
+                            <p></p>
                         </motion.div>
                     </div>
                     <div className='flex justify-center'>
@@ -85,7 +84,7 @@ const index: React.FC = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.3 }}
                 >
-                    <p className="text-red-700 dark:text-yellow-500 text-lg font-semibold">Stats</p>
+                    
                     <h2 className="text-red-700 dark:text-yellow-500 text-3xl md:text-4xl font-bold mt-2">Platform Made for Students by Students</h2>
                 </motion.div>
                 <motion.div
@@ -96,7 +95,7 @@ const index: React.FC = () => {
                 >
                     {[
                         { title: "1k+ Institutes", description: "An ever-growing number of institutes pan India." },
-                        { title: "2.5k+ Students", description: "Students Enrolled for Prayog Initiative." },
+                        { title: "2.5k+ Students", description: "Students Enrolled for Project Cloud Initiative." },
                         { title: "5k+ Projects", description: "A Huge Database of Projects on Various Subjects" }
                     ].map((item, index) => (
                         <motion.div

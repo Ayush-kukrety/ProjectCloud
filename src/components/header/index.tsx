@@ -49,7 +49,8 @@ const Header = () => {
     const navLinks = [
         { to: '/', text: 'Home' },
         { to: '/projects', text: 'Projects' },
-        { to: '/workshops', text: 'Workshops' },
+        { to: '/workshops', text: 'Profile' },
+        
         { to: '/about', text: 'About' },
         ...(studentLogged || instituteLogged ? [{ to: '/profile', text: 'Profile' }] : []),
         ...(adminLogged ? [{ to: '/admin', text: 'Admin' }] : []),
@@ -67,7 +68,7 @@ const Header = () => {
                             src={darkMode ? "/logos/logo-dark.png" : "/logos/logo-light.png"}
                             alt="Logo"
                         />
-                        <span className="text-3xl font-bold">Prayog</span>
+                        <span className="text-3xl  font-bold font-serif">Project Cloud</span>
                     </Link>
 
                     <div className="hidden md:flex items-center space-x-4">
@@ -114,6 +115,16 @@ const Header = () => {
                             {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
                         </button>
                     </div>
+                    <div>
+                    <Link
+                                
+                                href="/"
+                                className="hover:bg-sky-300 bg-orange-700 py-2 px-3 rounded-md transition-colors duration-200"
+                            >
+                                💬
+                            </Link>
+                    </div>
+                   
                 </div>
 
                 {isOpen && (
@@ -156,6 +167,7 @@ const Header = () => {
                                 alt={darkMode ? "Light mode" : "Dark mode"}
                             />
                         </button>
+                        
                     </div>
                 )}
             </div>

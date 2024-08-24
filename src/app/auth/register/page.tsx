@@ -50,7 +50,7 @@ const Register = () => {
                 if (type === 'student') {
                     toast.success('Check your email for verification');
                 } else {
-                    toast.success('Check your email for verification\nContact Prayog for Institutional Verification');
+                    toast.success('Check your email for verification\nContact Project Cloud for Institutional Verification');
                 }
             } else {
                 toast.error(result.error || 'An error occurred');
@@ -66,7 +66,7 @@ const Register = () => {
             <div className="max-w-md w-full space-y-8 bg-white dark:bg-gray-800 p-10 rounded-xl shadow-2xl transform transition-all hover:scale-105">
                 <div>
                     <h2 className="text-center text-3xl font-extrabold text-gray-900 dark:text-white">
-                        Join Prayog
+                        Join Project Cloud
                     </h2>
                     <p className="mt-2 text-center text-sm text-gray-600 dark:text-gray-400">
                         Create your account

@@ -6,11 +6,11 @@ Project Cloud is an open-source platform that connects students and educational 
 - **Project Showcase**: Students can upload and share their projects
 - **Event Hub**: Institutes can post information about seminars, workshops, and other events
 - **Open Access**: No login required to view projects or workshops
--**User Accounts**: Login to upload projects or post events
--**Live Session Integration**:Enabling users to engage in tasks concurrently for efficient project management
--**Interactive Chatbot Support**:assisting new users in real-time to address queries and challenges effectively
--**Easy-to-understand interface**:simplifying navigation and usability for seamless user interaction
--**Profile analytics**:offering insights into user behavior and preferences to tailor the platform for personalized experiences
+- **User Accounts**: Login to upload projects or post events
+- **Live Session Integration**:Enabling users to engage in tasks concurrently for efficient project management
+- **Interactive Chatbot Support**:assisting new users in real-time to address queries and challenges effectively
+- **Easy-to-understand interface**:simplifying navigation and usability for seamless user interaction
+- **Profile analytics**:offering insights into user behavior and preferences to tailor the platform for personalized experiences
 
 ## 🛠️ Tech Stack
 

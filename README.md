@@ -17,29 +17,28 @@ User Accounts: Login to upload projects or post events
 ## 🚀 Getting Started
 
 1. Clone the repository:
-``` git clone https://github.com/foldername```
+``` git clone https://github.com/eNVy047/ProjectCloud.git```
 2. Install dependencies:
-```cd foldername```
+```cd ProjectCloud```
 ```npm install```
-3. Set up Supabase:
+
+4. Set up Supabase:
     - Create a Supabase project
     - Copy the .env.example file to .env.local and fill in your Supabase credentials
-4. Run the development server:
+5. Run the development server:
 ```npm run dev```
-5. Open http://localhost:3000 in your browser
+6. Open http://localhost:3000 in your browser
+   
+## create .env.local in 
+NEXT_PUBLIC_SUPABASE_URL="https://zlrmudpaeihldcsfigwh.supabase.co"
+NEXT_SUPABASE_ANON_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inpscm11ZHBhZWlobGRjc2ZpZ3doIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjQ1MDA5OTgsImV4cCI6MjA0MDA3Njk5OH0.OW6tv8nTQy4IUwz6_nwZFgQMNQsCyrWhOSspoXJDSeY"
+
 
 ## 🤝 Contributing
+-> Narayan Verma
+->Ayush Kukrety
+->Rohit Maurya
+->Utkarsh Singh Parihar
 
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for more details.
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 📞 Contact
-
-For any queries or suggestions, please open an issue or contact the maintainers.
-
----
 
 Happy coding! 💻✨

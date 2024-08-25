@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Header from "@/components/header";
-
+import PopupChatBot from "@/components/bot"
 import "./globals.css";
 import Footer from "@/components/footer";
 import { Toaster } from "react-hot-toast";
@@ -57,7 +57,7 @@ export default function RootLayout({
             />
             <Header />
             {children}
-            
+            <PopupChatBot />
             <Footer />
           </AuthProvider>
         </StoreProvider>

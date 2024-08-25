@@ -8,6 +8,7 @@ import { RootState } from '@/lib/store'; // Corrected path
 import Link from 'next/link';
 import { useAppDispatch, useAppSelector } from '@/lib/hooks';
 import Image from 'next/image';
+import PopupChatBot from '../bot/index';
 
 const Header = () => {
     const darkMode = useAppSelector((state: RootState) => state.theme.darkMode);
@@ -115,15 +116,7 @@ const Header = () => {
                             {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
                         </button>
                     </div>
-                    <div>
-                    <Link
-                                
-                                href="/"
-                                className="hover:bg-sky-300 bg-orange-700 py-2 px-3 rounded-md transition-colors duration-200"
-                            >
-                                💬
-                            </Link>
-                    </div>
+                    
                    
                 </div>
 

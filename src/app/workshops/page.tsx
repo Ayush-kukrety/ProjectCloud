@@ -72,6 +72,7 @@ const Workshops: React.FC = () => {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.6 }}
+                            className='flex space-x-4'
                         >
                             <Link href='/workshops/view'>
                                 <button className="mt-3 bg-indigo-600 text-white px-6 py-3 rounded-full flex items-center justify-center space-x-2 hover:bg-indigo-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800">
